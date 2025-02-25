@@ -15,6 +15,6 @@ const button = document.querySelector('#searchBtn').addEventListener('click', ()
         wind.innerText = `Wind Speed: ${data.current.wind_kph} km/h`;
     }
 
-    const prom = fetch(`http://api.weatherapi.com/v1/current.json?key=6e7ba83dc86f4780b06102401252402&q=${input}&aqi=yes`);
+    const prom = fetch(`https://api.weatherapi.com/v1/current.json?key=6e7ba83dc86f4780b06102401252402&q=${input}&aqi=yes`);
     prom.then(response => response.json()).then(data => currweather(data));
 });
